@@ -26,4 +26,3 @@ jobs:
     - run: java -cp "junit-4.13.jar:hamcrest-2.2.jar:postgresql-42.2.5.jar:." org.junit.runner.JUnitCore unitTestTxnScript
     - run: echo "Execution de l'application"
     - run: java -cp "postgresql-42.2.5.jar:commons-cli-1.4.jar:." simplissimeCmdline
-      
