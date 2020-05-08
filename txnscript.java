@@ -313,18 +313,17 @@ public class txnscript
 
 	
 	
-    public static String updateVille (Integer id, String nom, Integer codePostal)
+    public static String updateVille (String nom, Integer codePostal)
     {
         String result = "" ;
 		
-		String sql = "UPDATE Villes SET nom = ?, code_postal = ? WHERE id = ?" ;
+		String sql = "UPDATE Villes SET nom = ?, code_postal = ?" ;
 
 		try
 		{
 				PreparedStatement pstmt = cnx.prepareStatement(sql) ;
 				pstmt.setString(1, nom);
 				pstmt.setDouble(2, codePostal);
-				pstmt.setInt(3, id);
 				pstmt.executeUpdate();
 		}
 		catch (SQLException e)
